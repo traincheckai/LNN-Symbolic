@@ -1,3 +1,3 @@
 # Fuzzy Logic for Rust
 
-A fuzzy logic library written in Rust
+Inspired by amogorkon's [fuzzylogic](https://github.com/amogorkon/fuzzylogic) Python3 library. 
