@@ -1,3 +1,17 @@
+use std::io;
+
+
 fn main() {
-    println!("Hello, world!");
+    Proposition();
+}
+
+fn Proposition() {
+
+    let mut name = String::new();
+
+    io::stdin()
+        .read_line(&mut names)
+        .expect("Failed to read line");
+
+    println!("{names}");
 }
