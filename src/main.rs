@@ -1,17 +1,25 @@
-use std::io;
-
-
-fn main() {
-    Proposition();
+#[derive(Debug)]
+struct Proposition {
+    name: String,
+    value: f64,
 }
 
-fn Proposition() {
+trait Leaf {
+    fn new(name: String) -> Self;
+    fn print(&self);
+}
 
-    let mut name = String::new();
+impl Leaf for Proposition {
+    fn new(name: String) -> Proposition {
+        return Proposition { name, value: 0.5 };
+    }
 
-    io::stdin()
-        .read_line(&mut names)
-        .expect("Failed to read line");
+    fn print(&self) {
+        println!("{}", self.name);
+    }
+}
 
-    println!("{names}");
+fn main() {
+    let mut messi: Proposition = Leaf::new(String::from("Messi"));
+    messi.print();
 }
